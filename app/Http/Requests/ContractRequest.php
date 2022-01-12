@@ -24,7 +24,7 @@ class ContractRequest extends FormRequest
     public function rules()
     {
         return [
-            'date_start' => ['required','before_or_equal:date_start'],
+            'date_start' => ['required','before_or_equal:date_end'],
             'date_end'=>['required'],
             
         ];

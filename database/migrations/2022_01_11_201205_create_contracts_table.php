@@ -17,8 +17,8 @@ class CreateContractsTable extends Migration
             $table->id();
             $table->date('date_start')->nullable();
             $table->date('date_end')->nullable();
-            $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('cargo_id')->constrained('cargos');
+            $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');;
+            $table->foreignId('cargo_id')->constrained('cargos')->onUpdate('cascade')->onDelete('cascade');;
             $table->string('type_contrat', 50);
 
            
